@@ -107,13 +107,14 @@ in
         python315
         brightnessctl
         spotify
-        zed-editor
+        zed-editor-fhs
         clang-tools
         clang
         ruff
         basedpyright
         bibata-cursors
         miku-cursor
+        noctalia-shell
     ];
 
     # set global environment variables
