@@ -95,6 +95,7 @@ in
 
     environment.systemPackages = with pkgs; [
         vim
+        stow
         wget
         git
         kitty
