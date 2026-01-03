@@ -110,6 +110,7 @@ in
         zed-editor
         clang-tools
         clang
+        ruff
         basedpyright
         bibata-cursors
         miku-cursor
