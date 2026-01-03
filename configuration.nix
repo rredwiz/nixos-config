@@ -32,7 +32,9 @@ in
         script = ''
             echo 0 | tee /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed
             '';
-    };
+    }; 
+    services.tuned.enable = true;
+    services.upower.enable = true;
 
     networking.hostName = "nixos";
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
