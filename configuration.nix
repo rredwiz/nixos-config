@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-let 
-    miku-cursor = pkgs.callPackage ./custom-apps/miku-cursor.nix {};
-in
 {
     imports =
     [
@@ -34,6 +31,7 @@ in
             echo 0 | tee /sys/bus/pci/devices/0000:01:00.0/d3cold_allowed
             '';
     }; 
+
     services.tuned.enable = true;
     services.upower.enable = true;
 
@@ -69,22 +67,14 @@ in
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
-    # programs that i enable configs for
-    programs.firefox.enable = true;
-    programs.hyprland.enable = true;
-    programs.waybar.enable = true;
-    programs.hyprlock.enable = true;
-    programs.zsh.enable = true;
-    programs.neovim.enable = true;
-    programs.yazi.enable = true;
-
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.redwiz = {
         isNormalUser = true;
         description = "andrew";
         extraGroups = [ "networkmanager" "wheel" ];
         shell = pkgs.zsh;
-        packages = with pkgs; [];
+        # configured with home-manager
+        # packages = with pkgs; [];
     };
 
     # Allow unfree packages
@@ -92,34 +82,10 @@ in
 
     environment.systemPackages = with pkgs; [
         vim
-        stow
         wget
+        stow
         git
-        kitty
         gh
-        swww
-        fastfetchMinimal
-        rofi
-        hyprshot
-        wlogout
-        vesktop
-        unzipNLS
-        python315
-        brightnessctl
-        spotify
-        zed-editor-fhs
-        clang-tools
-        clang
-        ruff
-        basedpyright
-        bibata-cursors
-        miku-cursor
-        quickshell
-        noctalia-shell
-        cmatrix
-        playerctl
-        nil
-        tree
     ];
 
     # set global environment variables
