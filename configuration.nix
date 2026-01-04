@@ -87,7 +87,7 @@ in
     };
 
     # Allow unfree packages
-    nixpkgs.config.allowUnfree = true;
+    config.allowUnfree = true;
 
     # don't know what this stuff means
     # List packages installed in system profile. To search, run:
@@ -105,7 +105,7 @@ in
         rofi
         hyprshot
         wlogout
-        discord
+        vesktop
         unzipNLS
         python315
         brightnessctl
@@ -121,6 +121,7 @@ in
         noctalia-shell
         cmatrix
         playerctl
+        nil
     ];
 
     # set global environment variables
