@@ -7,6 +7,7 @@ in
     imports =
     [
         ./hardware-configuration.nix
+        ./aliases.nix
     ];
 
     hardware.bluetooth.enable = true;
