@@ -80,6 +80,9 @@
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
+    programs.hyprland.enable = true;
+    programs.zsh.enable = true;
+
     environment.systemPackages = with pkgs; [
         vim
         wget

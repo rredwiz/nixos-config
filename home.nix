@@ -5,12 +5,10 @@ let
 in
 {
   programs.firefox.enable = true;
-  programs.hyprland.enable = true;
-  programs.zsh.enable = true;
   programs.neovim.enable = true;
   programs.yazi.enable = true;
 
-  home.pkgs = with pkgs; [
+  home.packages = with pkgs; [
     # swww
     # rofi
     # wlogout
@@ -37,4 +35,6 @@ in
     nil
     tree
   ];
+
+  home.stateVersion = "25.11";
 }
