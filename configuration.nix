@@ -89,10 +89,6 @@ in
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
-    # don't know what this stuff means
-    # List packages installed in system profile. To search, run:
-    # $ nix search wget
-
     environment.systemPackages = with pkgs; [
         vim
         stow
@@ -122,6 +118,7 @@ in
         cmatrix
         playerctl
         nil
+        tree
     ];
 
     # set global environment variables
