@@ -80,7 +80,7 @@ in
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.redwiz = {
         isNormalUser = true;
-        description = "Andrew Dutka";
+        description = "andrew";
         extraGroups = [ "networkmanager" "wheel" ];
         shell = pkgs.zsh;
         packages = with pkgs; [];
@@ -117,7 +117,10 @@ in
         basedpyright
         bibata-cursors
         miku-cursor
+        quickshell
         noctalia-shell
+        cmatrix
+        playerctl
     ];
 
     # set global environment variables
