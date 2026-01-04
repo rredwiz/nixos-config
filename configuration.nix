@@ -87,7 +87,7 @@ in
     };
 
     # Allow unfree packages
-    config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 
     # don't know what this stuff means
     # List packages installed in system profile. To search, run:
