@@ -13,30 +13,41 @@ in
     # rofi
     # wlogout
 
-    kitty
+    # utils
     hyprshot
     fastfetchMinimal
-    vesktop
     unzipNLS
-    python315
     brightnessctl
-    spotify
-    zed-editor-fhs
+    playerctl
+    tree
+    htop
+    btop
+    cmatrix
+
+    # development
+    python315
     clang-tools
     clang
     ruff
     lua-language-server
     basedpyright
+    nil
+    quickshell
+    alejandra
+    stylua
+
+    # apps
+    vesktop
+    spotify
+    noctalia-shell # technically a shell, but gui
+    zed-editor-fhs
+
+    # cosmetic
     bibata-cursors
     miku-cursor
-    quickshell
-    noctalia-shell
-    cmatrix
-    playerctl
-    nil
-    tree
-    htop
-    btop
+
+    # terminal
+    kitty
   ];
 
   home.stateVersion = "25.11";
