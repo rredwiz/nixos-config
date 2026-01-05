@@ -34,6 +34,8 @@ in
     playerctl
     nil
     tree
+    htop
+    btop
   ];
 
   home.stateVersion = "25.11";
