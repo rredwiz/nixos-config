@@ -1,6 +1,9 @@
-{pkgs, ...}: let
-  miku-cursor = pkgs.callPackage ./custom-apps/miku-cursor.nix {};
-in {
+{ pkgs, ... }:
+
+let
+  miku-cursor = pkgs.callPackage ./custom-apps/miku-cursor.nix { };
+in
+{
   programs.firefox.enable = true;
   programs.neovim.enable = true;
   programs.yazi.enable = true;

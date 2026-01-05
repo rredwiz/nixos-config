@@ -1,4 +1,5 @@
-{pkgs}:
+{ pkgs }:
+
 pkgs.stdenv.mkDerivation {
   pname = "miku-cursor";
   version = "1.2.6";

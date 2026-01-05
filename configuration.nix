@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+
+{
   imports = [
     ./hardware-configuration.nix
     ./aliases.nix
@@ -14,10 +16,10 @@
   # custom daemon for disabling d3cold on for wifi adapter
   systemd.services.disable-iwlwifi-d3cold = {
     description = "Disable D3cold for Intel WiFi (0000:01:00.0)";
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
 
     # Provide tee/echo in PATH for the service script
-    path = [pkgs.coreutils];
+    path = [ pkgs.coreutils ];
 
     serviceConfig = {
       Type = "oneshot";
@@ -62,13 +64,16 @@
 
   # ensures i have a portal enabled for screen sharing
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.redwiz = {
     isNormalUser = true;
     description = "andrew";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
     # configured with home-manager
     # packages = with pkgs; [];
@@ -109,7 +114,10 @@
     vista-fonts
   ];
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

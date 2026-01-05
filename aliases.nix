@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+
+{
   environment.systemPackages = [
     # opens a new tab in firefox on outlook
     (pkgs.writeShellScriptBin "outlook" ''
