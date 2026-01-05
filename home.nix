@@ -25,6 +25,7 @@ in
     clang-tools
     clang
     ruff
+    lua-language-server
     basedpyright
     bibata-cursors
     miku-cursor
