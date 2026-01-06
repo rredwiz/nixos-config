@@ -33,7 +33,9 @@
 
   services.tuned.enable = true;
   services.upower.enable = true;
-  services.tlp.enable = true;
+
+  # enable noctalia calendar events
+  services.gnome.evolution-data-server.enable = true;
 
   networking.hostName = "nixos";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -7,6 +7,11 @@
 
   programs.noctalia-shell = {
     enable = true;
+
+    package = pkgs.noctalia-shell.override {
+      calendarSupport = true;
+    };
+
     settings = {
       appLauncher = {
         customLaunchPrefix = "";
