@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -33,11 +33,12 @@
 
   services.tuned.enable = true;
   services.upower.enable = true;
+  services.tlp.enable = true;
 
   networking.hostName = "nixos";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # enables networking
-  networking.networkmanager.wifi.powersave = false; # fixes suspend iwlwifi driver issues
+  # networking.networkmanager.wifi.powersave = false;
 
   time.timeZone = "America/Halifax";
   i18n.defaultLocale = "en_CA.UTF-8";
