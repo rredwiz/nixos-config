@@ -4,7 +4,7 @@ let
   miku-cursor = pkgs.callPackage ./custom-builds/miku-cursor.nix { };
 in
 {
-  imports = [ ./config/noctalia/noctalia.nix ];
+  imports = [ ./config/noctalia.nix ];
 
   programs.firefox.enable = true;
   programs.neovim.enable = true;

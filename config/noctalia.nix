@@ -423,7 +423,7 @@
         code = false;
         discord = false;
         emacs = false;
-        enableUserTemplates = false;
+        enableUserTemplates = true;
         foot = false;
         fuzzel = false;
         ghostty = false;
