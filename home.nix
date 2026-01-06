@@ -1,9 +1,11 @@
 { pkgs, ... }:
 
 let
-  miku-cursor = pkgs.callPackage ./custom-apps/miku-cursor.nix { };
+  miku-cursor = pkgs.callPackage ./custom-builds/miku-cursor.nix { };
 in
 {
+  imports = [ ./config/noctalia/noctalia.nix ];
+
   programs.firefox.enable = true;
   programs.neovim.enable = true;
   programs.yazi.enable = true;
@@ -23,6 +25,7 @@ in
     htop
     btop
     cmatrix
+    ffmpeg-full
 
     # development
     python315
@@ -40,7 +43,6 @@ in
     # apps
     vesktop
     spotify
-    noctalia-shell # technically a shell, but gui
     zed-editor-fhs
 
     # cosmetic

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   imports = [
@@ -63,8 +63,11 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # ensures i have a portal enabled for screen sharing
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = [ "gtk" ];
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.redwiz = {
@@ -82,7 +85,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+  };
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
