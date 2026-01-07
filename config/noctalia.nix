@@ -8,7 +8,7 @@
   programs.noctalia-shell = {
     enable = true;
 
-    package = pkgs.noctalia-shell.override {
+    package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
       calendarSupport = true;
     };
 
