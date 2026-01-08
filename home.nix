@@ -39,6 +39,8 @@ in
     alejandra
     nixfmt
     stylua
+    clojure
+    clojure-lsp
 
     # apps
     vesktop
