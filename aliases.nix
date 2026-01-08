@@ -11,5 +11,10 @@
     (pkgs.writeShellScriptBin "brightspace" ''
       ${pkgs.firefox}/bin/firefox --new-tab "https://dal.brightspace.com/d2l/home"
     '')
+
+    # opens nix search in a new firefox tab
+    (pkgs.writeShellScriptBin "nixsearch" ''
+      ${pkgs.firefox}/bin/firefox --new-tab "https://search.nixos.org/packages"
+    '')
   ];
 }
