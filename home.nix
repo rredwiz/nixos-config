@@ -26,6 +26,7 @@ in
     btop
     cmatrix
     ffmpeg-full
+    intel-media-driver
 
     # development
     python315
@@ -41,6 +42,7 @@ in
     stylua
     clojure
     clojure-lsp
+    rust-analyzer
 
     # apps
     vesktop
