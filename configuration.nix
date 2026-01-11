@@ -8,7 +8,7 @@
 
   # automatically clean old versions
   nix.gc = {
-    enable = true;
+    automatic = true;
     dates = "weekly";
     options = "--delete-older-than 7d";
   };

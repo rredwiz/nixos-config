@@ -47,7 +47,7 @@ in
     # apps
     vesktop
     spotify
-    zed-editor-fhs
+    # zed-editor-fhs
 
     # cosmetic
     bibata-cursors
