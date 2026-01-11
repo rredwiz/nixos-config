@@ -6,6 +6,14 @@
     ./aliases.nix
   ];
 
+  # automatically clean old versions
+  nix.gc = {
+    enable = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+  boot.loader.grub.configurationLimit = 10; # limit grub to 10 iterations
+
   hardware.bluetooth.enable = true;
 
   boot.loader.systemd-boot.enable = true;
