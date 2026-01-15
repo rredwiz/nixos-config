@@ -11,9 +11,6 @@ in
   programs.yazi.enable = true;
 
   home.packages = with pkgs; [
-    # swww
-    # rofi
-    # wlogout
 
     # utils
     hyprshot

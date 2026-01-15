@@ -108,6 +108,7 @@
     stow
     git
     gh
+    networkmanagerapplet
   ];
 
   # set global environment variables
