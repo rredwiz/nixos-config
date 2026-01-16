@@ -40,6 +40,8 @@ in
     clojure
     clojure-lsp
     rust-analyzer
+    nodejs_24
+    typescript-language-server
 
     # apps
     vesktop
