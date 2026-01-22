@@ -6,6 +6,11 @@
     ./aliases.nix
   ];
 
+  # for patching nodejs binaries
+  # normally i wouldn't want this, but it makes it a lot easier to work with
+  # ideally, i create a nix environment per-project, but im still learning
+  programs.nix-ld.enable = true;
+
   # automatically clean old versions
   nix.gc = {
     automatic = true;

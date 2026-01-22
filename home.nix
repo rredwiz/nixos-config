@@ -9,6 +9,9 @@ in
   programs.firefox.enable = true;
   programs.neovim.enable = true;
   programs.yazi.enable = true;
+  programs.vesktop.enable = true;
+  programs.vscode.enable = true;
+  programs.obsidian.enable = true;
 
   home.packages = with pkgs; [
 
@@ -42,11 +45,10 @@ in
     rust-analyzer
     nodejs_24
     typescript-language-server
+    gemini-cli-bin
 
     # apps
-    vesktop
     spotify
-    # zed-editor-fhs
 
     # cosmetic
     bibata-cursors
