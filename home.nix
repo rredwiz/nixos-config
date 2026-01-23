@@ -46,6 +46,7 @@ in
     nodejs_24
     typescript-language-server
     gemini-cli-bin
+    mysql-workbench
 
     # apps
     spotify

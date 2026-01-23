@@ -128,13 +128,14 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
-
     nerd-fonts.noto
     nerd-fonts.jetbrains-mono
-
     atkinson-hyperlegible
-
     vista-fonts
+    fira-code
+    liberation_ttf
+    inter
+    roboto
   ];
 
   nix.settings.experimental-features = [
