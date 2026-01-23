@@ -138,6 +138,17 @@
     roboto
   ];
 
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      sansSerif = [
+        "Noto Sans"
+      ];
+      serif = [ "Noto Serif" ];
+      monospace = [ "JetBrainsMono Nerd Font" ];
+    };
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
