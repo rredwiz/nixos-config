@@ -47,6 +47,7 @@ in
     typescript-language-server
     gemini-cli-bin
     mysql-workbench
+    glpk # for linear solve sail thingy
 
     # apps
     spotify

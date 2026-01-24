@@ -82,7 +82,10 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = [ "gtk" ];
+    config.common.default = [
+      "hyprland"
+      "gtk"
+    ];
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -154,12 +157,21 @@
     "flakes"
   ];
 
+  # 8GB of zram
   zramSwap = {
     enable = true;
     priority = 100;
     algorithm = "lz4";
     memoryPercent = 50;
   };
+
+  # 16GB of swap
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+    }
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
