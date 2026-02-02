@@ -2,6 +2,7 @@
 
 let
   miku-cursor = pkgs.callPackage ./custom-builds/miku-cursor.nix { };
+  doro-cursor = pkgs.callPackage ./custom-builds/doro-cursor.nix { };
 in
 {
   imports = [ ./config/noctalia.nix ];
@@ -27,6 +28,8 @@ in
     cmatrix
     ffmpeg-full
     intel-media-driver
+    fzf
+    ripgrep
 
     # development
     python315
@@ -55,6 +58,7 @@ in
     # cosmetic
     bibata-cursors
     miku-cursor
+    doro-cursor
 
     # terminal
     kitty

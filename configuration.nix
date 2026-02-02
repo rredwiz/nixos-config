@@ -123,7 +123,7 @@
   environment.variables = {
     # XCURSOR_THEME = "Bibata-Modern-Ice";
     # XCURSOR_SIZE = "24";
-    XCURSOR_THEME = "miku-cursor";
+    XCURSOR_THEME = "doro-cursor";
     XCURSOR_SIZE = "32";
   };
 
