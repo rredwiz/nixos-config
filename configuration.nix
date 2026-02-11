@@ -95,11 +95,14 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "dialup"
+      "docker"
     ];
     shell = pkgs.zsh;
     # configured with home-manager
     # packages = with pkgs; [];
   };
+  virtualisation.docker.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

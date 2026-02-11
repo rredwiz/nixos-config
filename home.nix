@@ -51,6 +51,8 @@ in
     gemini-cli-bin
     mysql-workbench
     glpk # for linear solve sail thingy
+    docker
+    flex
 
     # apps
     spotify
