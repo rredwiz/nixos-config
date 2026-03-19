@@ -30,6 +30,8 @@ in
     intel-media-driver
     fzf
     ripgrep
+    moonlight-qt # for remoting
+    xhost # for x11 mirroring
 
     # development
     python315

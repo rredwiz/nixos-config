@@ -31,7 +31,7 @@
     description = "Disable D3cold for Intel WiFi (0000:01:00.0)";
     wantedBy = [ "multi-user.target" ];
 
-    # Provide tee/echo in PATH for the service script
+    # provide tee/echo in PATH for the service script
     path = [ pkgs.coreutils ];
 
     serviceConfig = {
@@ -49,6 +49,12 @@
 
   # enable noctalia calendar events
   services.gnome.evolution-data-server.enable = true;
+
+  # enabling tailscale for remoting into windows pc at home
+  services.tailscale.enable = true;
+
+  # enable flatpak (trying to install sober for roblox)
+  services.flatpak.enable = true;
 
   networking.hostName = "nixos";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -120,6 +126,7 @@
     git
     gh
     networkmanagerapplet
+    tailscale
   ];
 
   # set global environment variables
