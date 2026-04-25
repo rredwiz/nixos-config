@@ -8,7 +8,13 @@ in
   imports = [ ./config/noctalia.nix ];
 
   programs.firefox.enable = true;
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    extraLuaConfig = builtins.readFile ./nvim/init.lua;
+    withPython3 = true;
+    withNodeJs = true;
+    withRuby = false;
+  };
   programs.yazi.enable = true;
   programs.vesktop.enable = true;
   programs.vscode.enable = true;
@@ -55,6 +61,7 @@ in
     glpk # for linear solve sail thingy
     docker
     flex
+    codex
 
     # apps
     spotify
