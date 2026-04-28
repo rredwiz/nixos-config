@@ -1,24 +1,23 @@
-{ lib, stdenvNoCC, fetchzip }:
+{
+  lib,
+  stdenvNoCC,
+  fetchFromGitHub,
+}:
 
 stdenvNoCC.mkDerivation {
-  pname = "frieren-blz-cursor";
-  version = "2026-04-13";
+  pname = "frieren-linux-cursors";
+  version = "0.0.1";
 
-  src = fetchzip {
-    # Replace this with the direct FrierenBLZ.zip download URL from the page.
-    url = "https://PASTE_THE_REAL_FRIERENBLZ_ZIP_URL_HERE/FrierenBLZ.zip";
+  src = fetchFromGitHub {
+    owner = "rredwiz";
+    repo = "frieren-linux-cursors";
+    rev = "efa235699a1ceb791277383f2648f9da210df2ff";
     hash = lib.fakeHash;
   };
 
-  dontBuild = true;
-
   installPhase = ''
-    runHook preInstall
-
     mkdir -p $out/share/icons/FrierenBLZ
     cp -r ./* $out/share/icons/FrierenBLZ/
-
-    runHook postInstall
   '';
 
   meta = with lib; {
