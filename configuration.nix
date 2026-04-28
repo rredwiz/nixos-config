@@ -129,14 +129,6 @@
     tailscale
   ];
 
-  # set global environment variables
-  environment.variables = {
-    # XCURSOR_THEME = "Bibata-Modern-Ice";
-    # XCURSOR_SIZE = "24";
-    XCURSOR_THEME = "doro-cursor";
-    XCURSOR_SIZE = "32";
-  };
-
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans

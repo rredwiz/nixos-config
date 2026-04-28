@@ -3,6 +3,7 @@
 let
   miku-cursor = pkgs.callPackage ./custom-builds/miku-cursor.nix { };
   doro-cursor = pkgs.callPackage ./custom-builds/doro-cursor.nix { };
+  frieren-cursor = pkgs.callPackage ./custom-builds/frieren-cursor.nix { };
 in
 {
   imports = [ ./config/noctalia.nix ];
@@ -10,7 +11,7 @@ in
   programs.firefox.enable = true;
   programs.neovim = {
     enable = true;
-    extraLuaConfig = builtins.readFile ./nvim/init.lua;
+    initLua = builtins.readFile ./nvim/init.lua;
     withPython3 = true;
     withNodeJs = true;
     withRuby = false;
@@ -19,6 +20,14 @@ in
   programs.vesktop.enable = true;
   programs.vscode.enable = true;
   programs.obsidian.enable = true;
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = frieren-cursor;
+    name = "FrierenBLZ";
+    size = 32;
+  };
 
   home.packages = with pkgs; [
 
