@@ -47,6 +47,7 @@ in
     ripgrep
     moonlight-qt # for remoting
     xhost # for x11 mirroring
+    hyprcwd # for hyprland
 
     # development
     python315

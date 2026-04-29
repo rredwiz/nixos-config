@@ -12,7 +12,7 @@ stdenvNoCC.mkDerivation {
     owner = "rredwiz";
     repo = "frieren-linux-cursors";
     rev = "efa235699a1ceb791277383f2648f9da210df2ff";
-    hash = lib.fakeHash;
+    hash = "sha256-QUHv45dtgkOjzrZCrMkunWWlLnDiiw9fGK9Q8zqij90";
   };
 
   installPhase = ''
