@@ -47,6 +47,7 @@ in
     ripgrep
     moonlight-qt # for remoting
     xhost # for x11 mirroring
+    jq
 
     # development
     python315
