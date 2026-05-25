@@ -48,6 +48,10 @@ in
     moonlight-qt # for remoting
     xhost # for x11 mirroring
     jq
+    wl-kbptr # moving mouse with kb
+    wlroots_0_20 # wayland lib
+    wlrctl
+    ydotool
 
     # development
     python315
