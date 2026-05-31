@@ -8,7 +8,7 @@ in
 {
   imports = [
     ./config/noctalia.nix
-    ./config/codex.nix
+    ./config/codex-desktop.nix
   ];
 
   programs.firefox.enable = true;

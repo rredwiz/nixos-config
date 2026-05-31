@@ -2,7 +2,7 @@
 
 {
   imports = [
-    inputs.codex-desktop-linux.homeManagerModules.default
+    inputs.codexDesktopLinux.homeManagerModules.default
   ];
 
   programs.codex-desktop-linux = {
