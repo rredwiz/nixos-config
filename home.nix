@@ -6,7 +6,10 @@ let
   frieren-cursor = pkgs.callPackage ./custom-builds/frieren-cursor.nix { };
 in
 {
-  imports = [ ./config/noctalia.nix ];
+  imports = [
+    ./config/noctalia.nix
+    ./config/codex.nix
+  ];
 
   programs.firefox.enable = true;
   programs.neovim = {
@@ -52,6 +55,7 @@ in
     wlroots_0_20 # wayland lib
     wlrctl
     ydotool
+    rofi
 
     # development
     python315
