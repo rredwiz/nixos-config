@@ -2,10 +2,10 @@
 
 {
   imports = [
-    inputs.codexDesktopLinux.homeManagerModules.default
+    inputs.codex-desktop-linux.homeManagerModules.default
   ];
 
-  programs.codex-desktop-linux = {
+  programs.codexDesktopLinux = {
     enable = true;
     computerUseUi.enable = true;
   };
