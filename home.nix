@@ -56,6 +56,10 @@ in
     wlrctl
     ydotool
     rofi
+    wl-clipboard
+    glow
+    rojo
+    lune # lua runtime
 
     # development
     python315
