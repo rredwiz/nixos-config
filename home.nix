@@ -36,6 +36,7 @@ in
 
     # utils
     hyprshot
+    hypridle
     fastfetchMinimal
     unzipNLS
     brightnessctl
