@@ -28,12 +28,37 @@
       home-manager,
       ...
     }@inputs:
+    let
+      rojoVersion = "7.7.0";
+    in
     {
+      overlays.default = final: prev: {
+        rojo = prev.rojo.overrideAttrs (
+          finalAttrs: previousAttrs: {
+            version = rojoVersion;
+
+            src = final.fetchFromGitHub {
+              owner = "rojo-rbx";
+              repo = "rojo";
+              tag = "v${finalAttrs.version}";
+              hash = "sha256-2atNAiv51MNpxXdwvKSvtO1CGvQUOdUUOZszjAm3zi8=";
+              fetchSubmodules = true;
+            };
+
+            cargoDeps = final.rustPlatform.fetchCargoVendor {
+              inherit (finalAttrs) pname version src;
+              hash = "sha256-1xTvW3Ra6erYpjxgfp2m8qVMz6u99WCDv2VE/Xh2mFc=";
+            };
+          }
+        );
+      };
+
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
+            { nixpkgs.overlays = [ self.overlays.default ]; }
             ./configuration.nix
             home-manager.nixosModules.home-manager
             {
