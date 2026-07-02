@@ -59,7 +59,7 @@ in
     rofi
     wl-clipboard
     glow
-    rojo
+    # rojo
     lune # lua runtime
 
     # development
