@@ -11,7 +11,10 @@ in
     ./config/codex-desktop.nix
   ];
 
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    configPath = ".mozilla/firefox";
+  };
   programs.neovim = {
     enable = true;
     initLua = builtins.readFile ./nvim/init.lua;
@@ -25,6 +28,7 @@ in
   programs.obsidian.enable = true;
 
   home.pointerCursor = {
+    enable = true;
     gtk.enable = true;
     x11.enable = true;
     package = frieren-cursor;
@@ -37,7 +41,7 @@ in
     # utils
     hyprshot
     hypridle
-    fastfetchMinimal
+    fastfetch-unwrapped
     unzipNLS
     brightnessctl
     playerctl
