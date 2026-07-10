@@ -89,6 +89,7 @@ in
     docker
     flex
     codex-cli
+    stm32cubemx
 
     # apps
     spotify
