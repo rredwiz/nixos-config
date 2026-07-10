@@ -84,7 +84,7 @@ in
     glpk # for linear solve sail thingy
     docker
     flex
-    codex
+    codex-cli
 
     # apps
     spotify
